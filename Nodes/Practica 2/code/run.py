@@ -1,0 +1,25 @@
+# Search methods
+
+import search
+
+ab = search.GPSProblem('A', 'B'
+                       , search.romania)
+ze = search.GPSProblem('Z', 'E'
+                       , search.romania)
+zc = search.GPSProblem('Z', 'C'
+                       , search.romania)
+print(search.breadth_first_graph_search(ab).path())
+print(search.depth_first_graph_search(ab).path())
+print('----------------------')
+print(search.bnb_first_graph_search(ab).path())
+print(search.bnb_heur_first_graph_search(ab).path())
+print('----------------------')
+print(search.bnb_first_graph_search(ze).path())
+print(search.bnb_heur_first_graph_search(ze).path())
+print('----------------------')
+print(search.bnb_first_graph_search(zc).path())
+print(search.bnb_heur_first_graph_search(zc).path())
+
+# Result:
+# [<Node B>, <Node P>, <Node R>, <Node S>, <Node A>] : 101 + 97 + 80 + 140 = 418
+# [<Node B>, <Node F>, <Node S>, <Node A>] : 211 + 99 + 140 = 450
